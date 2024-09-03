@@ -18,6 +18,7 @@ public class GitpodTestController {
     @GetMapping("/test/{name}")
     public ResponseEntity<String> register(@Validated @PathVariable String name){
         String response = "Test " + name;
+        System.out.println("Request: " + name);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
