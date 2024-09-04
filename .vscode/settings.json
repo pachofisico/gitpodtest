@@ -1,5 +1,6 @@
 {
     "yaml.schemas": {
         "https://gitpod.io/schemas/gitpod-schema.json": "file:///workspace/gitpodtest/.gitpod.yml"
-    }
+    },
+    "java.compile.nullAnalysis.mode": "disabled"
 }
