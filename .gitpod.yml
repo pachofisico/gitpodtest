@@ -7,7 +7,9 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: ./gradlew build
+  - init: |
+      unset JAVA_HOME
+      unset SDKMAN_CANDIDATES_API
       sudo apt-get update
       sudo apt-get install -y openjdk-21-jdk
       sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/java-21-openjdk-amd64/bin/java 1
@@ -15,4 +17,3 @@ tasks:
       export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
       export PATH=$JAVA_HOME/bin:$PATH
     command: java -version
-
